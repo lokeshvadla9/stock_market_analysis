@@ -1,0 +1,38 @@
+=============================================
+To Install Kafka:
+
+1. wget https://downloads.apache.org/kafka/3.6.1/kafka_2.12-3.6.1.tgz
+2. tar -xvf  kafka_2.12-3.6.1.tgz
+
+===============================================
+To Install Java:
+
+1. sudo apt update
+2. sudo apt install default-jdk
+
+Check Java version:
+
+java -version
+================================================
+
+
+
+
+
+
+
+
+
+Create Topic
+==================================================
+bin/kafka-topics.sh --create --topic demo_test --bootstrap-server {IP Address}:9092 --replication-factor 1 --partitions 1
+
+Run producer
+==================================================
+
+bin/kafka-console-producer.sh --topic demo_test --bootstrap-server {IP Address}:9092
+
+Run consumer
+==================================================
+
+bin/kafka-console-consumer.sh --topic demo_test --bootstrap-server {IP Address}:9092
